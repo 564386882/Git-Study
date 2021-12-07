@@ -22,9 +22,18 @@
 
 `git checkout <git hashcode>`： 将HEAD指向提交记录而不是指向分支
 
-`git checkout <branchName>^`：将分支指向分支的父提交记录，多个^可向上移动多次
+`git checkout <branchName>^`：将当前分支上的HEAD指向分支的父提交记录，多个^可向上移动多次
 
 `git checkout HEAD^`： 将HEAD指向上一次提交记录
 
 `git checkout <git hashcode>^`： 指向某次提交记录(hash记录)的上一个提交记录
 
+`git branch -f <branchName> <hashcode>` ： 将某个分支强制指向到某个提交记录上
+
+`git reset <branchName/HEAD>^`：（本地）将某个分支/HEAD回退到上一个父节点
+
+`git reset <branchName/HEAD>~2`: （本地）将某个分支/HEAD回退到上几个父节点
+
+`git revert <branchName>`: （远端）将远端某个分支回退到上一个节点
+
+`git cherry-pick <git hashcode>...` 将多个提交记录添加到当前节点之后
